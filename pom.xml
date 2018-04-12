@@ -6,8 +6,8 @@
 	<groupId>com.algamoney.algamoney-api</groupId>
 	<artifactId>algamoney-api</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
+	<packaging>jar</packaging> 
+ 
 	<name>algamoney-api</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -75,12 +75,30 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
-		</dependency>
+		</dependency> 
 		
-		<!-- Pera gerar os metamodels -->
+		<!-- Pera gerar os metamodels 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
+		</dependency> -->
+		
+		<!-- Pera implementar segurança pelo spring -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<!-- OAuth 2 -->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+		</dependency>
+		
+		<!-- JWT -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
 		</dependency>
 		
 		
