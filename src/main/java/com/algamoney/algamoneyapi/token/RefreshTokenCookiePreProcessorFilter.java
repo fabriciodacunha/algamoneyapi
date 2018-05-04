@@ -26,7 +26,9 @@ public class RefreshTokenCookiePreProcessorFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
-		if("/oauth/token".equalsIgnoreCase(req.getRequestURI()) && "refresh_token".equals("grant_type") && req.getCookies() != null ) {
+		if("/oauth/token".equalsIgnoreCase(req.getRequestURI()) 
+				&& "refresh_token".equals(req.getParameter("grant_type")) 
+				&& req.getCookies() != null ) {
 			for (Cookie cookie : req.getCookies()) {
 				if(cookie.getName().equals("refreshToken")) {
 					String refreshToken = cookie.getValue();
@@ -41,13 +43,11 @@ public class RefreshTokenCookiePreProcessorFilter implements Filter {
 	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
 		
 	}
 	
