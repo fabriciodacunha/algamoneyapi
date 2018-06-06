@@ -20,7 +20,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import com.algamoney.algamoneyapi.config.property.AlgamoneyApiProperty;
 
-//@Profile("oauth-security")
+@Profile("oauth-security")
 @ControllerAdvice
 public class RefreshTokenPostProcessor implements ResponseBodyAdvice<OAuth2AccessToken>{
 	
